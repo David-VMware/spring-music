@@ -61,8 +61,8 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 
-    if (JavaVersion.current() != project.targetCompatibility) {
-        logger.warn("The build is using Java ${JavaVersion.current()} to build a Java ${project.targetCompatibility} compatible archive.")
+    if (JavaVersion.current() != targetCompatibility) {
+        logger.warn("The build is using Java ${JavaVersion.current()} to build a Java ${targetCompatibility} compatible archive.")
         logger.warn("See the project README for instructions on changing the target Java version.")
     }
 }
